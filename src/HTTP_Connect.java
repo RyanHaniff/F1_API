@@ -28,7 +28,11 @@ public class HTTP_Connect {
     // if they enter a string for the round, convert it to a number to query the
     // result
     public void showRounds() {
-
+        try {
+            System.out.println(getRequest());
+        } catch (Exception e) {
+            System.out.println(e);
+        }
     }
 
     private String getRequest() throws IOException, InterruptedException {
@@ -37,7 +41,6 @@ public class HTTP_Connect {
         HttpRequest request = HttpRequest.newBuilder().uri(URI.create(queryURL)).build();
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
         return response.body();
-
     }
 
 }
