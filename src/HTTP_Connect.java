@@ -1,3 +1,9 @@
+import java.io.IOException;
+import java.net.*;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
+
 public class HTTP_Connect {
 
     private static String BASE_URL = "https://ergast.com/api/f1/";
@@ -21,5 +27,17 @@ public class HTTP_Connect {
 
     // if they enter a string for the round, convert it to a number to query the
     // result
+    public void showRounds() {
+
+    }
+
+    private String getRequest() throws IOException, InterruptedException {
+        // GET request
+        HttpClient client = HttpClient.newHttpClient();
+        HttpRequest request = HttpRequest.newBuilder().uri(URI.create(queryURL)).build();
+        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+        return response.body();
+
+    }
 
 }
