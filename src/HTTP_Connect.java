@@ -28,9 +28,9 @@ public class HTTP_Connect {
     // result
     public void showRounds() {
         try {
-            System.out.println(getRequest());
+            ParseXML.readXML(getRequest());
         } catch (Exception e) {
-            System.out.println(e);
+            System.out.println("Exception at showRounds(): " + e);
         }
     }
 
