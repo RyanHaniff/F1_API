@@ -16,21 +16,23 @@ public class HTTP_Connect {
 
     public HTTP_Connect(String season) {
         this.queryURL = BASE_URL + season;
+        displayDetails();
 
     }
 
     public HTTP_Connect(String season, String round) {
         this.queryURL = BASE_URL + season + "/" + round;
+        displayDetails();
 
     }
 
     // if they enter a string for the round, convert it to a number to query the
     // result
-    public void showRounds() {
+    public void displayDetails() {
         try {
             ParseXML.readXML(getRequest());
         } catch (Exception e) {
-            System.out.println("Exception at showRounds(): " + e);
+            System.out.println("Exception at displayDetails(): " + e);
         }
     }
 
