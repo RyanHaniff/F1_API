@@ -6,6 +6,7 @@ public class CurrentSeasonConnect extends Connect {
 
     public CurrentSeasonConnect() {
         super.queryURL = super.BASE_URL + this.CURRENT;
+        super.displayDetails(queryURL);
     }
 
     @Override

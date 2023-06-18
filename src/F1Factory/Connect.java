@@ -11,6 +11,14 @@ public abstract class Connect {
     protected final String BASE_URL = "https://ergast.com/api/f1/";
     protected String queryURL = "";
 
+    public void displayDetails(String queryURL) {
+        try {
+            ParseXML.readXML(getRequest(queryURL));
+        } catch (Exception e) {
+            System.out.println("Exception at displayDetails(): " + e);
+        }
+    }
+
     public String getRequest(String queryURL) throws IOException, InterruptedException {
         // GET request
         HttpClient client = HttpClient.newHttpClient();

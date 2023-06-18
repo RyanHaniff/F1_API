@@ -7,6 +7,7 @@ public class PastSeasonConnect extends Connect {
     public PastSeasonConnect(int seasonNumber) {
         this.seasonNumber = Integer.toString(seasonNumber);
         super.queryURL = super.BASE_URL + seasonNumber;
+        super.displayDetails(queryURL);
     }
 
     @Override

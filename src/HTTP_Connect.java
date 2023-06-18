@@ -4,6 +4,8 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
+import F1Factory.ParseXML;
+
 public class HTTP_Connect {
 
     private static String BASE_URL = "https://ergast.com/api/f1/";
