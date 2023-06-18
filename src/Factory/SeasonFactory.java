@@ -6,10 +6,12 @@ public class SeasonFactory {
 
     public Season createConnection(String channel) {
 
-        if (channel.isEmpty()) {
-            return new CurrentSeason();
-        } else {
-            return new PastSeason(Integer.parseInt(channel));
-        }
+        return new CurrentSeason();
+
+        // if (channel.isEmpty()) {
+        //     return new CurrentSeason();
+        // } else {
+        //     return new PastSeason(Integer.parseInt(channel));
+        // }
     }
 }
