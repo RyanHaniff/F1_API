@@ -6,12 +6,7 @@ public class PastSeasonConnect extends Connect {
 
     public PastSeasonConnect(int seasonNumber) {
         this.seasonNumber = Integer.toString(seasonNumber);
-    }
-
-    @Override
-    public String getRequest() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getRequest'");
+        super.queryURL = super.BASE_URL + seasonNumber;
     }
 
     @Override

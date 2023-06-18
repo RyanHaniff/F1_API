@@ -2,10 +2,10 @@ package F1Factory;
 
 public class CurrentSeasonConnect extends Connect {
 
-    @Override
-    public String getRequest() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getRequest'");
+    private final String CURRENT = "current";
+
+    public CurrentSeasonConnect() {
+        super.queryURL = super.BASE_URL + this.CURRENT;
     }
 
     @Override
