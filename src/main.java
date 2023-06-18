@@ -1,11 +1,13 @@
+import Factory.SeasonFactory;
+import Factory.Season;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        HTTP_Connect _2023 = new HTTP_Connect("2023");
-        System.out.println("===============");
-        HTTP_Connect _2023_1 = new HTTP_Connect("2023", "1");
+        SeasonFactory seasonFactory = new SeasonFactory();
+        Season current = seasonFactory.createConnection("");
+        System.out.println(current);
     }
 
 }

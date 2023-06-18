@@ -1,4 +1,4 @@
-package F1Factory;
+package Connect;
 
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.DocumentBuilder;

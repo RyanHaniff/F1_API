@@ -1,4 +1,4 @@
-package F1Factory;
+package Connect;
 
 public class PastSeasonConnect extends Connect {
 

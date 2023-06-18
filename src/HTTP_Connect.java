@@ -4,7 +4,7 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
-import F1Factory.ParseXML;
+import Connect.ParseXML;
 
 public class HTTP_Connect {
 
