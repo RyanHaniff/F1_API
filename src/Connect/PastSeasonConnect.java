@@ -1,5 +1,7 @@
 package Connect;
 
+import ParseXML.ParseXML;
+
 public class PastSeasonConnect extends Connect {
 
     private String seasonNumber;

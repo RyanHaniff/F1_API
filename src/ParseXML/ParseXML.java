@@ -1,4 +1,4 @@
-package Connect;
+package ParseXML;
 
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.DocumentBuilder;

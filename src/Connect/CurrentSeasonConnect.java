@@ -1,5 +1,7 @@
 package Connect;
 
+import ParseXML.ParseXML;
+
 public class CurrentSeasonConnect extends Connect {
 
     private final String CURRENT = "current";
