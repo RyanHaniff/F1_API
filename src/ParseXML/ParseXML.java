@@ -12,7 +12,7 @@ import java.io.FileInputStream;
 import java.io.StringReader;
 import java.util.HashMap;
 
-public class ParseXML {
+public abstract class ParseXML {
 
     private String xmlString;
 

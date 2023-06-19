@@ -1,23 +1,35 @@
 package Connect;
 
+import ParseXML.ParseXMLAllSeasons;
+
 public class SeasonList extends Connect {
+
+    private final String ALL_SEASONS = "seasons";
+
+    public SeasonList() {
+        super(); // call super constructor to run the tag names
+        super.queryURL = super.BASE_URL + this.ALL_SEASONS;
+        displayDetails();
+    }
 
     @Override
     public void setTagName() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'setTagName'");
+        super.tagName = "SeasonTable";
     }
 
     @Override
     public void setElementName() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'setElementName'");
+        super.elementName = "Season";
     }
 
     @Override
     public void displayDetails() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'displayDetails'");
+        try {
+            String xmlResponse = getRequest(queryURL);
+            ParseXMLAllSeasons.readXML(xmlResponse, super.elementName, super.elementName);
+        } catch (Exception e) {
+            System.out.println("Exception at displayDetails(): " + e);
+        }
     }
 
     @Override
