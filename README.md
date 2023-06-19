@@ -1,4 +1,4 @@
-# F1_API
+# F1 API
 
 The Formula 1 API is a Java-based application that retrieves and presents data from the Ergast Developer API (http://ergast.com/mrd/). It provides various endpoints to access information about Formula 1 seasons, tracks, qualifying results, and race results.
 
@@ -54,7 +54,7 @@ Call the createConnection function with the result you want as a string:
 ## Authors
 
   - **Ryan Haniff** -
-    [RyanHaniff]([https://github.com/PurpleBooth](https://github.com/RyanHaniff))
+    [RyanHaniff](https://github.com/RyanHaniff)
 
 ## Acknowledgments
 
