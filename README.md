@@ -2,6 +2,13 @@
 
 The Formula 1 API is a Java-based application that retrieves and presents data from the Ergast Developer API (http://ergast.com/mrd/). It provides various endpoints to access information about Formula 1 seasons, tracks, qualifying results, and race results.
 
+## Features
+- Retrieve a list of all Formula 1 seasons.
+- Get the current list of tracks for the ongoing season.
+- Fetch the track list for past seasons.
+- Access the current qualifying results.
+- Obtain the current race results.****
+
 ## Getting Started
 
 These instructions will give you a copy of the project up and running on
@@ -50,6 +57,15 @@ Call the createConnection function with the result you want as a string:
 19      Russell
 20      Sargeant 
 ```
+
+## Contributing
+Contributions to the Formula 1 API are welcome! If you'd like to contribute, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch.
+3. Make your changes and commit them.
+4. Push the changes to your fork.
+5. Submit a pull request.
 
 ## Authors
 
