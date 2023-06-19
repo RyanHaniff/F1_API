@@ -14,6 +14,8 @@ public class F1ResultsFactory {
             return new SeasonListRequest();
         } else if (channel == "latest race results") {
             return new RaceResultsRequest();
+        } else if (channel == "latest qualifying results") {
+            return new QualifyingResultsRequest();
         }
         return null;
     }

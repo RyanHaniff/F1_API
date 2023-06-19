@@ -2,19 +2,20 @@ package RequestData;
 
 import ParseXML.ParseXML;
 
-public class RaceResultsRequest extends Request {
+public class QualifyingResultsRequest extends Request {
 
-    private final String LATEST_RACE_RESULTS = "current/last/results";
+    private final String LATEST_QUALIFYING_RESULTS = "current/last/qualifying";
 
-    public RaceResultsRequest() {
+    public QualifyingResultsRequest() {
         super();
-        super.queryURL = super.BASE_URL + this.LATEST_RACE_RESULTS;
+        super.queryURL = super.BASE_URL + this.LATEST_QUALIFYING_RESULTS;
+        System.out.println("---Latest Qualifying Results---");
         displayDetails();
     }
 
     @Override
     public void setTagName() {
-        super.tagName = "Result";
+        super.tagName = "QualifyingResult";
     }
 
     @Override
