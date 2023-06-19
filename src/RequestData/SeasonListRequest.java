@@ -1,12 +1,12 @@
-package Connect;
+package RequestData;
 
 import ParseXML.ParseXMLAllSeasons;
 
-public class SeasonList extends Connect {
+public class SeasonListRequest extends Request {
 
     private final String ALL_SEASONS = "seasons?limit=1000";
 
-    public SeasonList() {
+    public SeasonListRequest() {
         super(); // call super constructor to run the tag names
         super.queryURL = super.BASE_URL + this.ALL_SEASONS;
         displayDetails();

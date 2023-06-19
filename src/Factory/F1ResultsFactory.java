@@ -1,17 +1,17 @@
 package Factory;
 
-import Connect.*;
+import RequestData.*;
 
 public class F1ResultsFactory {
 
-    public Connect createConnection(String channel) {
+    public Request createConnection(String channel) {
 
         if (channel.isEmpty()) {
-            return new CurrentSeasonConnect();
+            return new CurrentSeasonRequest();
         } else if (channel == "2013") {
-            return new PastSeasonConnect(Integer.parseInt(channel));
+            return new PastSeasonRequest(Integer.parseInt(channel));
         } else if (channel == "season") {
-            return new SeasonList();
+            return new SeasonListRequest();
         }
         return null;
     }

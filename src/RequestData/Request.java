@@ -1,4 +1,4 @@
-package Connect;
+package RequestData;
 
 import java.io.IOException;
 import java.net.URI;
@@ -6,14 +6,14 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
-public abstract class Connect {
+public abstract class Request {
 
     protected final String BASE_URL = "https://ergast.com/api/f1/";
     protected String queryURL = "";
     protected String tagName;
     protected String elementName;
 
-    public Connect() {
+    public Request() {
         setTagName();
         setElementName();
     }
