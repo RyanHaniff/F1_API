@@ -1,14 +1,13 @@
-import Factory.SeasonFactory;
-import Factory.Season;
+import Factory.F1ResultsFactory;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        SeasonFactory seasonFactory = new SeasonFactory();
-        seasonFactory.createConnection("");
+        F1ResultsFactory factory = new F1ResultsFactory();
+        factory.createConnection("");
         System.out.println("========================");
-        seasonFactory.createConnection("2013");
+        factory.createConnection("2013");
 
     }
 

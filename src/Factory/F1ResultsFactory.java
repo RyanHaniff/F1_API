@@ -8,7 +8,6 @@ public class F1ResultsFactory {
 
         if (channel.isEmpty()) {
             Connect currentSeason = new CurrentSeasonConnect();
-
         } else {
             Connect pastSeason = new PastSeasonConnect(Integer.parseInt(channel));
         }
