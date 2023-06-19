@@ -10,10 +10,13 @@ public abstract class Connect {
 
     protected final String BASE_URL = "https://ergast.com/api/f1/";
     protected String queryURL = "";
+    protected String tagName;
+    protected String elementName;
 
     public void displayDetails(String queryURL) {
         try {
-            ParseXML.readXML(getRequest(queryURL));
+            String xmlResponse = getRequest(queryURL);
+            ParseXML.readXML(xmlResponse, tagName, elementName);
         } catch (Exception e) {
             System.out.println("Exception at displayDetails(): " + e);
         }
@@ -28,5 +31,11 @@ public abstract class Connect {
     }
 
     public abstract String toString();
+
+    public abstract void tagName();
+
+    public abstract void elementName();
+
+    public abstract void displayDetails();
 
 }

@@ -10,12 +10,15 @@ import org.w3c.dom.Element;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.StringReader;
+import java.util.HashMap;
 
 public class ParseXML {
 
     private String xmlString;
 
-    public static void readXML(String xmlFile) {
+    public static HashMap<Integer, String> readXML(String xmlFile, String tagName, String elementName) {
+
+        HashMap<Integer, String> xmlHashMap = new HashMap<>();
 
         // an instance of factory that gives a document builder
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
@@ -39,18 +42,22 @@ public class ParseXML {
             // }
 
             // ordered collection of nodes
-            NodeList race = doc.getElementsByTagName("Race");
-            for (int i = 0; i < race.getLength(); i++) {
-                // getting the parent Race node
-                Node node = race.item(i);
+            NodeList nodeElements = doc.getElementsByTagName(tagName); // "Race"
+            for (int i = 0; i < nodeElements.getLength(); i++) {
+                // getting the parent node
+                Node node = nodeElements.item(i);
                 if (node.getNodeType() == Node.ELEMENT_NODE) {
                     Element eElement = (Element) node;
-                    System.out.println(eElement.getElementsByTagName("RaceName").item(0).getTextContent());
+                    System.out.println(eElement.getElementsByTagName(elementName).item(0).getTextContent()); // "RaceName"
+                    xmlHashMap.put(i, eElement.getElementsByTagName(elementName).item(0).getTextContent());
                 }
             }
+
         } catch (Exception e) {
             System.out.println("Exception at readXML(): " + e);
         }
+
+        return xmlHashMap;
     }
 
 }
