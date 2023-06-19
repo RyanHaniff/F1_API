@@ -5,6 +5,7 @@ public class CurrentSeasonConnect extends Connect {
     private final String CURRENT = "current";
 
     public CurrentSeasonConnect() {
+        super(); // call super constructor to run the tag names
         super.queryURL = super.BASE_URL + this.CURRENT;
         displayDetails();
     }

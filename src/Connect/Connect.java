@@ -13,6 +13,11 @@ public abstract class Connect {
     protected String tagName;
     protected String elementName;
 
+    public Connect() {
+        setTagName();
+        setElementName();
+    }
+
     public String getRequest(String queryURL) throws IOException, InterruptedException {
         // GET request
         HttpClient client = HttpClient.newHttpClient();

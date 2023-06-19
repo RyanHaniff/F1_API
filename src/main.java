@@ -7,6 +7,7 @@ public class Main {
 
         SeasonFactory seasonFactory = new SeasonFactory();
         seasonFactory.createConnection("");
+        System.out.println("========================");
         seasonFactory.createConnection("2013");
 
     }
