@@ -16,15 +16,15 @@ Requirements for the software and other tools to build, test and push
 
 Clone the repository:
 
-    ```Git clone https://github.com/RyanHaniff/F1_API```
+```Git clone https://github.com/RyanHaniff/F1_API```
 
 In main.java, create a F1ResultsFactory object:
 
-  ```F1ResultsFactory factory = new F1ResultsFactory();```
+```F1ResultsFactory factory = new F1ResultsFactory();```
   
 Call the createConnection function with the result you want as a string:
 
-  ```factory.createConnection("latest race results");```
+```factory.createConnection("latest race results");```
   
   Output:
 ```  
