@@ -9,6 +9,7 @@ public class RaceResultsRequest extends Request {
     public RaceResultsRequest() {
         super();
         super.queryURL = super.BASE_URL + this.LATEST_RACE_RESULTS;
+        System.out.println("---Latest Race Results---");
         displayDetails();
     }
 

@@ -9,6 +9,7 @@ public class SeasonListRequest extends Request {
     public SeasonListRequest() {
         super(); // call super constructor to run the tag names
         super.queryURL = super.BASE_URL + this.ALL_SEASONS;
+        System.out.println("---Every F1 Season---");
         displayDetails();
     }
 

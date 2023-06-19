@@ -10,6 +10,7 @@ public class PastSeasonRequest extends Request {
         super();
         this.seasonNumber = Integer.toString(seasonNumber);
         super.queryURL = super.BASE_URL + seasonNumber;
+        System.out.println("---" + seasonNumber + " Season List---");
         displayDetails();
     }
 

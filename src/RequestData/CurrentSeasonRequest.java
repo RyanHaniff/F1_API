@@ -9,6 +9,7 @@ public class CurrentSeasonRequest extends Request {
     public CurrentSeasonRequest() {
         super(); // call super constructor to run the tag names
         super.queryURL = super.BASE_URL + this.CURRENT;
+        System.out.println("---Current Season List---");
         displayDetails();
     }
 
