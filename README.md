@@ -7,7 +7,7 @@ The Formula 1 API is a Java-based application that retrieves and presents data f
 - Get the current list of tracks for the ongoing season.
 - Fetch the track list for past seasons.
 - Access the current qualifying results.
-- Obtain the current race results.****
+- Obtain the current race results.
 
 ## Getting Started
 
