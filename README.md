@@ -73,4 +73,4 @@ Contributions to the Formula 1 API are welcome! If you'd like to contribute, ple
 
 ## Acknowledgments
 
-  - Ergast Developer API
+  - [Ergast Developer API](http://ergast.com/mrd/)
