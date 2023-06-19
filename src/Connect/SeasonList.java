@@ -4,7 +4,7 @@ import ParseXML.ParseXMLAllSeasons;
 
 public class SeasonList extends Connect {
 
-    private final String ALL_SEASONS = "seasons";
+    private final String ALL_SEASONS = "seasons?limit=80";
 
     public SeasonList() {
         super(); // call super constructor to run the tag names
@@ -26,7 +26,7 @@ public class SeasonList extends Connect {
     public void displayDetails() {
         try {
             String xmlResponse = getRequest(queryURL);
-            ParseXMLAllSeasons.readXML(xmlResponse, super.elementName, super.elementName);
+            ParseXMLAllSeasons.readXML(xmlResponse);
         } catch (Exception e) {
             System.out.println("Exception at displayDetails(): " + e);
         }

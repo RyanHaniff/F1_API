@@ -14,7 +14,7 @@ import org.xml.sax.InputSource;
 
 public class ParseXMLAllSeasons extends ParseXML {
 
-    public static HashMap<Integer, String> readXML(String xmlFile, String tagName, String elementName) {
+    public static HashMap<Integer, String> readXML(String xmlFile) {
 
         HashMap<Integer, String> xmlHashMap = new HashMap<>();
 
