@@ -4,7 +4,7 @@ import ParseXML.ParseXMLAllSeasons;
 
 public class SeasonList extends Connect {
 
-    private final String ALL_SEASONS = "seasons?limit=80";
+    private final String ALL_SEASONS = "seasons?limit=1000";
 
     public SeasonList() {
         super(); // call super constructor to run the tag names
