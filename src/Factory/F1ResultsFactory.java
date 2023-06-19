@@ -4,12 +4,12 @@ import Connect.*;
 
 public class F1ResultsFactory {
 
-    public void createConnection(String channel) {
+    public Connect createConnection(String channel) {
 
         if (channel.isEmpty()) {
-            Connect currentSeason = new CurrentSeasonConnect();
+            return new CurrentSeasonConnect();
         } else {
-            Connect pastSeason = new PastSeasonConnect(Integer.parseInt(channel));
+            return new PastSeasonConnect(Integer.parseInt(channel));
         }
     }
 }
