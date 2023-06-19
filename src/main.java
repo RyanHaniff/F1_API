@@ -12,14 +12,18 @@ public class Main {
     public static void main(String[] args) {
 
         F1ResultsFactory factory = new F1ResultsFactory();
-        factory.createConnection("season");
+
         // factory.createConnection("");
         // System.out.println("========================");
         // factory.createConnection("2013");
+        // factory.createConnection("season");
+        factory.createConnection("latest race results");
+
         // http://ergast.com/api/f1/seasons
         // http://ergast.com/api/f1/current
+
         // try {
-        // System.out.println(getRequest("http://ergast.com/api/f1/seasons"));
+        // System.out.println(getRequest("http://ergast.com/api/f1/current/last/results"));
         // } catch (Exception e) {
         // System.out.println(e);
         // }

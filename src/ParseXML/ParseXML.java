@@ -48,7 +48,8 @@ public abstract class ParseXML {
                 Node node = nodeElements.item(i);
                 if (node.getNodeType() == Node.ELEMENT_NODE) {
                     Element eElement = (Element) node;
-                    System.out.println(eElement.getElementsByTagName(elementName).item(0).getTextContent()); // "RaceName"
+                    System.out.println(
+                            (i + 1) + "\t" + eElement.getElementsByTagName(elementName).item(0).getTextContent()); // "RaceName"
                     xmlHashMap.put(i, eElement.getElementsByTagName(elementName).item(0).getTextContent());
                 }
             }

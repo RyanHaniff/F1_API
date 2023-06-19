@@ -1,12 +1,12 @@
-package Connect;
+package RequestData;
 
 import ParseXML.ParseXML;
 
-public class CurrentSeasonConnect extends Connect {
+public class CurrentSeasonRequest extends Request {
 
     private final String CURRENT = "current";
 
-    public CurrentSeasonConnect() {
+    public CurrentSeasonRequest() {
         super(); // call super constructor to run the tag names
         super.queryURL = super.BASE_URL + this.CURRENT;
         displayDetails();

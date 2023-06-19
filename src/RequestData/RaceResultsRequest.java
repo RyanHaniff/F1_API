@@ -2,15 +2,24 @@ package RequestData;
 
 import ParseXML.ParseXML;
 
-public class PastSeasonRequest extends Request {
+public class RaceResultsRequest extends Request {
 
-    private String seasonNumber;
+    private final String LATEST_RESULTS = "current/last/results";
 
-    public PastSeasonRequest(int seasonNumber) {
+    public RaceResultsRequest() {
         super();
-        this.seasonNumber = Integer.toString(seasonNumber);
-        super.queryURL = super.BASE_URL + seasonNumber;
+        super.queryURL = super.BASE_URL + this.LATEST_RESULTS;
         displayDetails();
+    }
+
+    @Override
+    public void setTagName() {
+        super.tagName = "Result";
+    }
+
+    @Override
+    public void setElementName() {
+        super.elementName = "FamilyName";
     }
 
     @Override
@@ -21,16 +30,6 @@ public class PastSeasonRequest extends Request {
         } catch (Exception e) {
             System.out.println("Exception at displayDetails(): " + e);
         }
-    }
-
-    @Override
-    public void setTagName() {
-        super.tagName = "Race";
-    }
-
-    @Override
-    public void setElementName() {
-        super.elementName = "RaceName";
     }
 
     @Override

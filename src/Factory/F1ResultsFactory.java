@@ -12,6 +12,8 @@ public class F1ResultsFactory {
             return new PastSeasonRequest(Integer.parseInt(channel));
         } else if (channel == "season") {
             return new SeasonListRequest();
+        } else if (channel == "latest race results") {
+            return new RaceResultsRequest();
         }
         return null;
     }
