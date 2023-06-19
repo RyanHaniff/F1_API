@@ -16,18 +16,18 @@ public class main {
         // factory.createConnection("");
         // System.out.println("========================");
         // factory.createConnection("2013");
-        // factory.createConnection("season");
+        factory.createConnection("season");
         // factory.createConnection("latest race results");
-        factory.createConnection("latest qualifying results");
+        // factory.createConnection("latest qualifying results");
 
         // http://ergast.com/api/f1/seasons
         // http://ergast.com/api/f1/current
         // http://ergast.com/api/f1/current/last/results
         // https://ergast.com/api/f1/current/last/qualifying
 
-            // try {
+        // try {
         // System.out.println(g
-            // } catch (Exception e) {
+        // } catch (Exception e) {
         // System.out.println(e);
         // }
 

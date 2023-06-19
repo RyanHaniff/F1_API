@@ -36,6 +36,7 @@ public class ParseXMLAllSeasons extends ParseXML {
             // print the text of each child node
             for (int i = 0; i < nodes.getLength(); i++) {
                 System.out.println(nodes.item(i).getTextContent());
+                xmlHashMap.put(i, nodes.item(i).getTextContent());
             }
 
         } catch (Exception e) {

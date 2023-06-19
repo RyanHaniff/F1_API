@@ -1,6 +1,7 @@
 package RequestData;
 
 import ParseXML.ParseXMLAllSeasons;
+import java.util.HashMap;
 
 public class SeasonListRequest extends Request {
 
@@ -27,7 +28,10 @@ public class SeasonListRequest extends Request {
     public void displayDetails() {
         try {
             String xmlResponse = getRequest(queryURL);
-            ParseXMLAllSeasons.readXML(xmlResponse);
+            HashMap<Integer, String> allSeasonsHash = ParseXMLAllSeasons.readXML(xmlResponse);
+            // System.out.println("test: " + allSeasonsHash.get);
+            // System.out.println("Total Number of Seasons: " + allSeasonsHash.size());
+            // System.out.println("seasons: " + allSeasonsHash);
         } catch (Exception e) {
             System.out.println("Exception at displayDetails(): " + e);
         }
