@@ -53,8 +53,7 @@ Call the createConnection function with the result you want as a string:
 
 ## Authors
 
-  - **Ryan Haniff** -
-    [RyanHaniff](https://github.com/RyanHaniff)
+  - [RyanHaniff](https://github.com/RyanHaniff)
 
 ## Acknowledgments
 
