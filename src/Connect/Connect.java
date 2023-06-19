@@ -13,15 +13,6 @@ public abstract class Connect {
     protected String tagName;
     protected String elementName;
 
-    public void displayDetails(String queryURL) {
-        try {
-            String xmlResponse = getRequest(queryURL);
-            ParseXML.readXML(xmlResponse, tagName, elementName);
-        } catch (Exception e) {
-            System.out.println("Exception at displayDetails(): " + e);
-        }
-    }
-
     public String getRequest(String queryURL) throws IOException, InterruptedException {
         // GET request
         HttpClient client = HttpClient.newHttpClient();
@@ -30,12 +21,11 @@ public abstract class Connect {
         return response.body();
     }
 
-    public abstract String toString();
+    public abstract void setTagName();
 
-    public abstract void tagName();
-
-    public abstract void elementName();
+    public abstract void setElementName();
 
     public abstract void displayDetails();
 
+    public abstract String toString();
 }

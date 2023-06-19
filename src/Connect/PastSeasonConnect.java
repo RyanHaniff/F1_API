@@ -7,7 +7,27 @@ public class PastSeasonConnect extends Connect {
     public PastSeasonConnect(int seasonNumber) {
         this.seasonNumber = Integer.toString(seasonNumber);
         super.queryURL = super.BASE_URL + seasonNumber;
-        super.displayDetails(queryURL);
+        displayDetails();
+    }
+
+    @Override
+    public void displayDetails() {
+        try {
+            String xmlResponse = getRequest(queryURL);
+            ParseXML.readXML(xmlResponse, super.tagName, super.elementName);
+        } catch (Exception e) {
+            System.out.println("Exception at displayDetails(): " + e);
+        }
+    }
+
+    @Override
+    public void setTagName() {
+        super.tagName = "Race";
+    }
+
+    @Override
+    public void setElementName() {
+        super.elementName = "RaceName";
     }
 
     @Override
@@ -15,4 +35,5 @@ public class PastSeasonConnect extends Connect {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'toString'");
     }
+
 }

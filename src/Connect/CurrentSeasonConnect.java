@@ -6,7 +6,27 @@ public class CurrentSeasonConnect extends Connect {
 
     public CurrentSeasonConnect() {
         super.queryURL = super.BASE_URL + this.CURRENT;
-        super.displayDetails(queryURL);
+        displayDetails();
+    }
+
+    @Override
+    public void displayDetails() {
+        try {
+            String xmlResponse = getRequest(queryURL);
+            ParseXML.readXML(xmlResponse, super.tagName, super.elementName);
+        } catch (Exception e) {
+            System.out.println("Exception at displayDetails(): " + e);
+        }
+    }
+
+    @Override
+    public void setTagName() {
+        super.tagName = "Race";
+    }
+
+    @Override
+    public void setElementName() {
+        super.elementName = "RaceName";
     }
 
     @Override
