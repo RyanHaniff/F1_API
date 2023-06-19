@@ -27,8 +27,8 @@ Call the createConnection function with the result you want as a string:
   ```factory.createConnection("latest race results");```
   
   Output:
-  
-  ```---Latest Race Results---
+```  
+  ---Latest Race Results---
 1       Verstappen
 2       Alonso
 3       Hamilton
@@ -48,7 +48,8 @@ Call the createConnection function with the result you want as a string:
 17      Magnussen
 18      de Vries
 19      Russell
-20      Sargeant```
+20      Sargeant 
+```
 
 ## Authors
 
