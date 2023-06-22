@@ -18,7 +18,7 @@ public class SeasonListRequest extends Request {
     private final String ALL_SEASONS = "seasons?limit=1000";
 
     /**
-     * Constrcutor call to base class to instantiate
+     * Constructor call to base class to instantiate
      * {@link SeasonListRequest#setTagName()} and
      * {@link SeasonListRequest#setElementName()}
      * When class is instantiated it will automatically display the results to

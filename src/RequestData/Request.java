@@ -81,5 +81,4 @@ public abstract class Request {
      */
     public abstract void setElementName();
 
-    public abstract String toString();
 }

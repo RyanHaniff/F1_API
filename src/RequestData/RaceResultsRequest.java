@@ -15,7 +15,7 @@ public class RaceResultsRequest extends Request {
     private final String LATEST_RACE_RESULTS = "current/last/results";
 
     /**
-     * Constrcutor call to base class to instantiate
+     * Constructor call to base class to instantiate
      * {@link SeasonListRequest#setTagName()} and
      * {@link SeasonListRequest#setElementName()}
      * When class is instantiated it will automatically display the results to
@@ -51,12 +51,6 @@ public class RaceResultsRequest extends Request {
     @Override
     public void setElementName() {
         super.elementName = "FamilyName";
-    }
-
-    @Override
-    public String toString() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'toString'");
     }
 
 }
