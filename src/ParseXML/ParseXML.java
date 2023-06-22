@@ -7,15 +7,24 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 import org.w3c.dom.Node;
 import org.w3c.dom.Element;
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.StringReader;
 import java.util.HashMap;
 
+/**
+ * The default XML parser for the responses from the ergast API
+ */
 public abstract class ParseXML {
 
-    private String xmlString;
-
+    /**
+     * 
+     * @param xmlFile     is the raw file that is returned from ergast API as a
+     *                    string
+     * @param tagName     is parent tag based on the data requst (race, qualifying,
+     *                    etc.)
+     * @param elementName is the child tag that has the text content (first name,
+     *                    last name, etc.)
+     * @return a hashmap of the index as the key and elmentName as the value
+     */
     public static HashMap<Integer, String> readXML(String xmlFile, String tagName, String elementName) {
 
         HashMap<Integer, String> xmlHashMap = new HashMap<>();
@@ -28,18 +37,6 @@ public abstract class ParseXML {
             StringReader stringReader = new StringReader(xmlFile);
             InputSource inInputSource = new InputSource(stringReader);
             Document doc = builder.parse(inInputSource);
-
-            // // get the first element
-            // Element elem = doc.getDocumentElement();
-
-            // // get all child nodes
-            // NodeList nodes = elem.getChildNodes();
-
-            // // print the text of each child node
-            // for (int i = 0; i < nodes.getLength(); i++) {
-
-            // System.out.println("" + nodes.item(i).getTextContent());
-            // }
 
             // ordered collection of nodes
             NodeList nodeElements = doc.getElementsByTagName(tagName); // "Race"

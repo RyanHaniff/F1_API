@@ -2,10 +2,8 @@ package ParseXML;
 
 import java.io.StringReader;
 import java.util.HashMap;
-
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
-
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
@@ -21,7 +19,8 @@ public class ParseXMLAllSeasons extends ParseXML {
     /**
      * 
      * @param xmlFile The XML file that gets returned when querying ergast API
-     * @return A hashmap of all the seasons race in Formula 1
+     * @return A hashmap of the index as the key and year as the value for all the
+     *         seasons race in Formula 1
      */
     public static HashMap<Integer, String> readXML(String xmlFile) {
 
