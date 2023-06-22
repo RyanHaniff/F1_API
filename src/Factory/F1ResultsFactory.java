@@ -47,6 +47,12 @@ public class F1ResultsFactory {
         return null;
     }
 
+    /**
+     * Check to see if the string value is a integer
+     * 
+     * @param channel is a string of the year
+     * @return a boolean true if the string is a integer, false otherwise
+     */
     public boolean isNumeric(String channel) {
         try {
             Integer.parseInt(channel);
