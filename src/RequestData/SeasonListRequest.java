@@ -6,7 +6,6 @@ import java.util.HashMap;
 /**
  * Displays a list of all documented seasons in years as shown in
  * http://ergast.com/api/f1/seasons
- * 
  */
 public class SeasonListRequest extends Request {
 
