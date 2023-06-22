@@ -8,12 +8,21 @@ import javax.xml.parsers.DocumentBuilderFactory;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
-import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 
+/**
+ * The returned query from Ergast API gets processed here.
+ * To get all the seasons, the XML format has one parent node with many child
+ * nodes holding the year of each season
+ */
 public class ParseXMLAllSeasons extends ParseXML {
 
+    /**
+     * 
+     * @param xmlFile The XML file that gets returned when querying ergast API
+     * @return A hashmap of all the seasons race in Formula 1
+     */
     public static HashMap<Integer, String> readXML(String xmlFile) {
 
         HashMap<Integer, String> xmlHashMap = new HashMap<>();
