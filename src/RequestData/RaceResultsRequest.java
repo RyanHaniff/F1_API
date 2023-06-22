@@ -3,7 +3,7 @@ package RequestData;
 import ParseXML.ParseXML;
 
 /**
- * Displays a table of race results for the last grand prix as shown in
+ * Displays a table of latest race results; as shown in:
  * http://ergast.com/api/f1/current/last/results
  */
 public class RaceResultsRequest extends Request {
@@ -18,7 +18,7 @@ public class RaceResultsRequest extends Request {
      * Constructor call to base class to instantiate
      * {@link SeasonListRequest#setTagName()} and
      * {@link SeasonListRequest#setElementName()}
-     * When class is instantiated it will automatically display the results to
+     * When the class is instantiated, it will automatically display the results to
      * console
      */
     public RaceResultsRequest() {

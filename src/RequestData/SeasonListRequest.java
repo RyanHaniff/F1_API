@@ -21,7 +21,7 @@ public class SeasonListRequest extends Request {
      * Constructor call to base class to instantiate
      * {@link SeasonListRequest#setTagName()} and
      * {@link SeasonListRequest#setElementName()}
-     * When class is instantiated it will automatically display the results to
+     * When the class is instantiated, it will automatically display the results to
      * console
      */
     public SeasonListRequest() {
