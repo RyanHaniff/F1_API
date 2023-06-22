@@ -10,15 +10,26 @@ public class main {
 
     public static void main(String[] args) {
 
-        // Create teh F1 factory
+        // Create the F1 factory
         F1ResultsFactory factory = new F1ResultsFactory();
 
-        // factory.createConnection("");
-        // System.out.println("========================");
-        // Pass in a string of what information you want to get
-        factory.createConnection("2013");
+        /*
+         * Pass in a string of what information you want to get
+         */
+
+        // gets the current race season
+        factory.createConnection("");
+
+        // gets the list of races from 2015
+        factory.createConnection("2015");
+
+        // gets all the F1 seasons since the start of F1
         factory.createConnection("season");
+
+        // gets the latest race results
         factory.createConnection("latest race results");
+
+        // the latest qualifying results
         factory.createConnection("latest qualifying results");
 
         /* Used for testing xml response */
@@ -28,7 +39,7 @@ public class main {
         // https://ergast.com/api/f1/current/last/qualifying
 
         // try {
-        // System.out.println(g
+        // System.out.println(getRequest("https://ergast.com/api/f1/current/last/qualifying"));
         // } catch (Exception e) {
         // System.out.println(e);
         // }

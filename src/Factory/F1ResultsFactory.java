@@ -1,5 +1,7 @@
 package Factory;
 
+import java.time.Year;
+
 import RequestData.*;
 
 /**
@@ -18,17 +20,40 @@ public class F1ResultsFactory {
      */
     public Request createConnection(String channel) {
 
-        if (channel.isEmpty()) {
+        int year;
+
+        // check to see if the channel is a year
+        if (isNumeric(channel)) {
+            year = Integer.parseInt(channel);
+            // check to see if the year is between 1950 and current year
+            if ((year >= 1950) & (year <= Year.now().getValue())) {
+                return new PastSeasonRequest(year);
+            } else {
+                return null;
+            }
+            // if the channel is empty, call the current year season list
+        } else if (channel.isEmpty()) {
             return new CurrentSeasonRequest();
-        } else if (channel == "2013") {
-            return new PastSeasonRequest(Integer.parseInt(channel));
+            // called when you want a list of all docuemnted seasons in F1
         } else if (channel == "season") {
             return new SeasonListRequest();
+            // called to show the latest race results
         } else if (channel == "latest race results") {
             return new RaceResultsRequest();
+            // called to show the latest qualifying results
         } else if (channel == "latest qualifying results") {
             return new QualifyingResultsRequest();
-        }
+        } // As more classes get created we can add them here because its a factory method
         return null;
     }
+
+    public boolean isNumeric(String channel) {
+        try {
+            Integer.parseInt(channel);
+            return true;
+        } catch (NumberFormatException e) {
+            return false;
+        }
+    }
+
 }
