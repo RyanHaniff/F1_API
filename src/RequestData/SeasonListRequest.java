@@ -3,10 +3,24 @@ package RequestData;
 import ParseXML.ParseXMLAllSeasons;
 import java.util.HashMap;
 
+/**
+ * Displays a list of all documented seasons in years as shown in
+ * http://ergast.com/api/f1/seasons
+ * 
+ */
 public class SeasonListRequest extends Request {
 
+    /**
+     * Used to set the limit of seasons shown on one page to 1000
+     */
     private final String ALL_SEASONS = "seasons?limit=1000";
 
+    /**
+     * Constrcutor call to base class to instantiate
+     * {@link SeasonListRequest#setTagName()} and
+     * {@link SeasonListRequest#setElementName()}
+     * 
+     */
     public SeasonListRequest() {
         super(); // call super constructor to run the tag names
         super.queryURL = super.BASE_URL + this.ALL_SEASONS;
@@ -14,16 +28,10 @@ public class SeasonListRequest extends Request {
         displayDetails();
     }
 
-    @Override
-    public void setTagName() {
-        super.tagName = "SeasonTable";
-    }
-
-    @Override
-    public void setElementName() {
-        super.elementName = "Season";
-    }
-
+    /**
+     * Showing the results of the query to the console. Can later be used for data
+     * anlysis.
+     */
     @Override
     public void displayDetails() {
         try {
@@ -35,6 +43,16 @@ public class SeasonListRequest extends Request {
         } catch (Exception e) {
             System.out.println("Exception at displayDetails(): " + e);
         }
+    }
+
+    @Override
+    public void setTagName() {
+        super.tagName = "SeasonTable";
+    }
+
+    @Override
+    public void setElementName() {
+        super.elementName = "Season";
     }
 
     @Override

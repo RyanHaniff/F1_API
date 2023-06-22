@@ -6,6 +6,14 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
+/**
+ * Base class for all query requests to Ergast F1 API
+ * Using the Factory design pattern because there are a unkwon number of sub
+ * classes that can be made from this abstract class
+ * 
+ * @author Ryan Haniff
+ */
+
 public abstract class Request {
 
     /**
