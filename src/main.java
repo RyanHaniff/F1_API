@@ -15,10 +15,10 @@ public class main {
 
         // factory.createConnection("");
         // System.out.println("========================");
-        // factory.createConnection("2013");
+        factory.createConnection("2013");
         factory.createConnection("season");
-        // factory.createConnection("latest race results");
-        // factory.createConnection("latest qualifying results");
+        factory.createConnection("latest race results");
+        factory.createConnection("latest qualifying results");
 
         // http://ergast.com/api/f1/seasons
         // http://ergast.com/api/f1/current
