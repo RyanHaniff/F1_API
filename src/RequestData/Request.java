@@ -66,6 +66,12 @@ public abstract class Request {
     }
 
     /**
+     * Calls {@link Request#getClass()} and {@link ParseXML#readXML()} to display
+     * all details from query
+     */
+    public abstract void displayDetails();
+
+    /**
      * Set the {@link Request#tagName} for child class
      */
     public abstract void setTagName();
@@ -74,12 +80,6 @@ public abstract class Request {
      * Set the {@link Request#elementName} for child classes
      */
     public abstract void setElementName();
-
-    /**
-     * Calls {@link Request#getClass()} and {@link ParseXML#readXML()} to display
-     * all details from query
-     */
-    public abstract void displayDetails();
 
     public abstract String toString();
 }

@@ -11,7 +11,9 @@ import java.util.HashMap;
 public class SeasonListRequest extends Request {
 
     /**
-     * Used to set the limit of seasons shown on one page to 1000
+     * String that gets concatnated to {@link Request#BASE_URL} to show all seasons
+     * on one page.
+     * Max seasons arbitrarily set to 1000
      */
     private final String ALL_SEASONS = "seasons?limit=1000";
 
@@ -19,7 +21,8 @@ public class SeasonListRequest extends Request {
      * Constrcutor call to base class to instantiate
      * {@link SeasonListRequest#setTagName()} and
      * {@link SeasonListRequest#setElementName()}
-     * 
+     * When class is instantiated it will automatically display the results to
+     * console
      */
     public SeasonListRequest() {
         super(); // call super constructor to run the tag names
@@ -31,6 +34,7 @@ public class SeasonListRequest extends Request {
     /**
      * Showing the results of the query to the console. Can later be used for data
      * anlysis.
+     * A call to ParseXMLAllSeasons because of th different XML response from ergast
      */
     @Override
     public void displayDetails() {
