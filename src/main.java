@@ -24,7 +24,7 @@ public class main {
         factory.createConnection("2015");
 
         // gets all the F1 seasons since the start of F1
-        factory.createConnection("season");
+        // factory.createConnection("season");
 
         // gets the latest race results
         factory.createConnection("latest race results");
@@ -39,7 +39,7 @@ public class main {
         // https://ergast.com/api/f1/current/last/qualifying
 
         // try {
-        // System.out.println(getRequest("https://ergast.com/api/f1/current/last/qualifying"));
+        // System.out.println(getRequest("http://ergast.com/api/f1/current"));
         // } catch (Exception e) {
         // System.out.println(e);
         // }

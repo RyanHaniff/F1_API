@@ -15,6 +15,14 @@ import java.util.HashMap;
  */
 public abstract class ParseXML {
 
+    protected Object[] columnNames;
+
+    protected Object[][] data;
+
+    public abstract void readXML(String xmlFile);
+
+    public abstract void printTable();
+
     /**
      * 
      * @param xmlFile     is the raw file that is returned from ergast API as a
