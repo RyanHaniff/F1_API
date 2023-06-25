@@ -54,4 +54,16 @@ public class ParseXMLAllSeasons extends ParseXML {
         return xmlHashMap;
     }
 
+    @Override
+    public void readXML(String xmlFile) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'readXML'");
+    }
+
+    @Override
+    public void printTable() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'printTable'");
+    }
+
 }

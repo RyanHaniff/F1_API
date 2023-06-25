@@ -18,6 +18,7 @@ public class ParseXMLCurrentSeason extends ParseXML {
     private static final String RACE_NAME = "RaceName";
     private static final String DATE = "Date";
     private static final String ROUND_ATTRIBUTE = "round";
+    int count = 0;
 
     @Override
     public void readXML(String xmlFile) {
@@ -30,24 +31,65 @@ public class ParseXMLCurrentSeason extends ParseXML {
             InputSource inInputSource = new InputSource(stringReader);
             Document doc = builder.parse(inInputSource);
 
+            Element raceElement = doc.getDocumentElement();
+            NodeList nodeList = raceElement.getChildNodes();
+
+            iterateNodes(nodeList);
+
+            // NodeList childElementsInRace = raceElement.getChildNodes();
+
+            // for (int i = 0; i < childElementsInRace.getLength(); i++) {
+            // String text = childElementsInRace.item(i).getTextContent();
+            // text = text.trim();
+            // System.out.println("test");
+            // System.out.println(text);
+            // count++;
+            // }
+
             // ordered collection of nodes
-            NodeList nodeElements = doc.getElementsByTagName(PARENT_NODE); // RaceTable
-            for (int i = 0; i < nodeElements.getLength(); i++) {
-                // getting the parent node
-                Node node = nodeElements.item(i);
-                if (node.getNodeType() == Node.ELEMENT_NODE) {
-                    Element eElement = (Element) node;
-                    System.out.println(
-                            (i + 1) + "\t" + eElement.getElementsByTagName(RACE_NAME).item(0).getTextContent()); // "RaceName"
-                    // xmlHashMap.put(i,
-                    // eElement.getElementsByTagName(elementName).item(0).getTextContent());
-                }
-            }
+            // NodeList nodeElements = doc.getElementsByTagName(PARENT_NODE); // RaceTable
+            // for (int i = 0; i < nodeElements.getLength(); i++) {
+            // // getting the parent node
+            // Node node = nodeElements.item(i);
+            // if (node.getNodeType() == Node.ELEMENT_NODE) {
+            // Element eElement = (Element) node;
+            // System.out.println(
+            // (i + 1) + "\t" +
+            // eElement.getElementsByTagName(RACE_NAME).item(0).getTextContent()); //
+            // "RaceName"
+            // System.out.println(
+            // (i + 1) + "\t" +
+            // eElement.getElementsByTagName(DATE).item(0).getTextContent());
+            // System.out.println(
+            // (i + 1) + "\t" + eElement.getAttribute(ROUND_ATTRIBUTE));
+            // // xmlHashMap.put(i,
+            // // eElement.getElementsByTagName(elementName).item(0).getTextContent());
+            // }
+            // }
 
         } catch (Exception e) {
             System.out.println("Exception at readXML(): " + e);
         }
+        System.out.println(count);
 
+    }
+
+    private static void iterateNodes(NodeList nodeList) {
+        for (int i = 0; i < nodeList.getLength(); i++) {
+            Node node = nodeList.item(i);
+
+            if (node.getNodeType() == Node.ELEMENT_NODE) {
+                if (node.getNodeName() == RACE_NAME) {
+                    System.out.println("Node Value: " + node.getTextContent());
+                }
+                // System.out.println("Node Name: " + node.getNodeName());
+                // System.out.println("Node Value: " + node.getTextContent());
+
+                if (node.hasChildNodes()) {
+                    iterateNodes(node.getChildNodes());
+                }
+            }
+        }
     }
 
     @Override
