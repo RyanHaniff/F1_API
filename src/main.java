@@ -21,16 +21,16 @@ public class main {
         factory.createConnection("");
 
         // gets the list of races from 2015
-        // factory.createConnection("2015");
+        factory.createConnection("2015");
 
         // gets all the F1 seasons since the start of F1
         // factory.createConnection("season");
 
         // gets the latest race results
-        // factory.createConnection("latest race results");
+        factory.createConnection("latest race results");
 
-        // // the latest qualifying results
-        // factory.createConnection("latest qualifying results");
+        // the latest qualifying results
+        factory.createConnection("latest qualifying results");
 
         /* Used for testing xml response */
         // http://ergast.com/api/f1/seasons

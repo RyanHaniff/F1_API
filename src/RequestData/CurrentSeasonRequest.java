@@ -1,7 +1,6 @@
 package RequestData;
 
 import ParseXML.ParseXML;
-import ParseXML.ParseXMLCurrentSeason;
 
 /**
  * Displays a table of all the races to be held within the current year.
@@ -37,11 +36,7 @@ public class CurrentSeasonRequest extends Request {
     public void displayDetails() {
         try {
             String xmlResponse = getRequest(queryURL);
-
-            ParseXML parse = new ParseXMLCurrentSeason();
-            parse.readXML(xmlResponse);
-
-            // ParseXML.readXML(xmlResponse, super.tagName, super.elementName);
+            ParseXML.readXML(xmlResponse, super.tagName, super.elementName);
         } catch (Exception e) {
             System.out.println("Exception at displayDetails(): " + e);
         }
