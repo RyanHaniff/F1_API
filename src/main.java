@@ -24,7 +24,7 @@ public class main {
         factory.createConnection("2015");
 
         // gets all the F1 seasons since the start of F1
-        // factory.createConnection("season");
+        factory.createConnection("season");
 
         // gets the latest race results
         factory.createConnection("latest race results");
